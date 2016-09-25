@@ -8,8 +8,8 @@ Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Neura
 4. Cuda (if use nvidia gpu)
 
 ### Results
-![image](https://github.com/kpzhang93/MTCNN_face_detection_alignment/paper/examples.png)
-![image](https://github.com/kpzhang93/MTCNN_face_detection_alignment/paper/result.png)
+![image](https://kpzhang93.github.io/MTCNN_face_detection_alignment/paper/examples.png)
+![image](https://kpzhang93.github.io/MTCNN_face_detection_alignment/paper/result.png)
 
 ### Citation
     @article{7553523,
