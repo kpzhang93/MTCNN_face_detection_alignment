@@ -1,0 +1,5 @@
+Log file created at: 2016/09/25 18:15:41
+Running on machine: Q5OYGZG4CRLPD7I
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+F0925 18:15:41.809584 10888 syncedmem.cpp:19] Check failed: error == cudaSuccess (29 vs. 0)  driver shutting down
+F0925 18:15:41.809584 10888 syncedmem.cpp:19] Check failed: error == cudaSuccess (29 vs. 0)  driver shutting down
