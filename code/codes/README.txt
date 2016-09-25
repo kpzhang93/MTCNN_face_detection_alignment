@@ -8,6 +8,10 @@ Requirement
 'MTCNNv2' is an extended version (using iamge patch around each landmark outputted from stage 3 to make a precise regression).
 'camera_demo' is a camera face detection demo based on MTCNNv2
 
+If you want to reproduce our results on WIDER FACE in our paper, please set minsize as 10 and scale factor as 0.79.
+
 Contact:
+Yu Qiao
+yu.qiao@siat.ac.cn
 Kaipeng Zhang
 kpzhang@cmlab.csie.ntu.edu.tw
