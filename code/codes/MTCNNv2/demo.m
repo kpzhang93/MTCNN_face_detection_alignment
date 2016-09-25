@@ -33,6 +33,9 @@ RNet=caffe.Net(prototxt_dir,model_dir,'test');
 prototxt_dir = strcat(caffe_model_path,'/det3.prototxt');
 model_dir = strcat(caffe_model_path,'/det3.caffemodel');
 ONet=caffe.Net(prototxt_dir,model_dir,'test');
+prototxt_dir =  strcat(caffe_model_path,'/det4.prototxt');
+model_dir =  strcat(caffe_model_path,'/det4.caffemodel');
+LNet=caffe.Net(prototxt_dir,model_dir,'test');
 faces=cell(0);	
 for i=1:length(imglist)
     i
@@ -41,7 +44,7 @@ for i=1:length(imglist)
 	%minl=min([size(img,1) size(img,2)]);
 	%minsize=fix(minl*0.1)
     tic
-    [boudingboxes points]=detect_face(img,minsize,PNet,RNet,ONet,threshold,false,factor);
+    [boudingboxes points]=detect_face(img,minsize,PNet,RNet,ONet,LNet,threshold,false,factor);
 	toc
     faces{i,1}={boudingboxes};
 	faces{i,2}={points'};

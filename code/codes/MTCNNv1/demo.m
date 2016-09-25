@@ -33,9 +33,6 @@ RNet=caffe.Net(prototxt_dir,model_dir,'test');
 prototxt_dir = strcat(caffe_model_path,'/det3.prototxt');
 model_dir = strcat(caffe_model_path,'/det3.caffemodel');
 ONet=caffe.Net(prototxt_dir,model_dir,'test');
-prototxt_dir =  strcat(caffe_model_path,'/det4.prototxt');
-model_dir =  strcat(caffe_model_path,'/det4.caffemodel');
-LNet=caffe.Net(prototxt_dir,model_dir,'test');
 faces=cell(0);	
 for i=1:length(imglist)
     i
