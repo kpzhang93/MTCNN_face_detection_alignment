@@ -31,6 +31,6 @@ This code is distributed under MIT LICENSE
 
 ### Contact
 Yu Qiao
-yu.qiao@siat.ac.cn
+yu.qiao@siat.ac.cn<br>
 Kaipeng Zhang
 kpzhang@cmlab.csie.ntu.edu.tw
