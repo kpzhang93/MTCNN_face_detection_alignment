@@ -2,8 +2,6 @@ function [boundingbox reg] = generateBoundingBox(map,reg,scale,t)
 	%use heatmap to generate bounding boxes
     stride=2;
     cellsize=12;
-    boundingbox=[];
-	map=map;
 	dx1=reg(:,:,1);
 	dy1=reg(:,:,2);
 	dx2=reg(:,:,3);
