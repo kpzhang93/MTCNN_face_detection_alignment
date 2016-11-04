@@ -11,6 +11,11 @@ Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Neura
 ![image](https://kpzhang93.github.io/MTCNN_face_detection_alignment/paper/examples.png)
 ![image](https://kpzhang93.github.io/MTCNN_face_detection_alignment/paper/result.png)
 
+### Other implementation
+[C++ & caffe ](https://github.com/happynear/MTCNN_face_detection_alignment) (strongly recommend)
+[Python & mxnet](https://github.com/pangyupo/mxnet_mtcnn_face_detection)
+[Python & caffe](https://github.com/DuinoDu/mtcnn)
+
 ### Face Recognition 
 Here we strongly recommend [Center Face](https://github.com/ydwen/caffe-face), which is an effective and efficient open-source tool for face recognition.
 
