@@ -93,20 +93,26 @@ function [total_boxes points] = detect_face(img,minsize,PNet,RNet,ONet,threshold
 			score=squeeze(out{3}(2,:));
 			points=out{2};
 			pass=find(score>threshold(3));
-			points=points(:,pass);
 			total_boxes=[total_boxes(pass,1:4) score(pass)'];
-			mv=out{1}(:,pass);
-			w=total_boxes(:,3)-total_boxes(:,1)+1;
-            h=total_boxes(:,4)-total_boxes(:,2)+1;
-            points(1:5,:)=repmat(w',[5 1]).*points(1:5,:)+repmat(total_boxes(:,1)',[5 1])-1;
-            points(6:10,:)=repmat(h',[5 1]).*points(6:10,:)+repmat(total_boxes(:,2)',[5 1])-1;
-			if size(total_boxes,1)>0				
+			mv=out{1}(:,pass);         
+            total_boxes_tmp=total_boxes;
+			if size(total_boxes,1)>0	
 				total_boxes=bbreg(total_boxes,mv(:,:)');	
                 pick=nms(total_boxes,0.7,'Min');
-				total_boxes=total_boxes(pick,:);  				
-                points=points(:,pick);
+				total_boxes=total_boxes(pick,:);  
+                
+                points1=points(:,pass(pick));
+                ONet.blobs('data').reshape([48 48 3 length(pass(pick))]);
+                tempimg=tempimg(:,end:-1:1,:,pass(pick));
+                out=ONet.forward({tempimg});
+                points=out{2};            
+                points2=[1-points([2,1,3,5,4],:);points([7,6,8,10,9],:)];
+                points=(points1+points2)/2;
+                w=total_boxes_tmp(pick,3)-total_boxes_tmp(pick,1)+1;
+                h=total_boxes_tmp(pick,4)-total_boxes_tmp(pick,2)+1;
+                points(1:5,:)=repmat(w',[5 1]).*points(1:5,:)+repmat(total_boxes_tmp(pick,1)',[5 1])-1;
+                points(6:10,:)=repmat(h',[5 1]).*points(6:10,:)+repmat(total_boxes_tmp(pick,2)',[5 1])-1;     
 			end
 		end
     end 	
 end
-
