@@ -12,9 +12,10 @@ Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Neura
 ![image](https://kpzhang93.github.io/MTCNN_face_detection_alignment/paper/result.png)
 
 ### Other implementation
-[C++ & caffe ](https://github.com/happynear/MTCNN_face_detection_alignment) (strongly recommend)<br>
+[C++ & caffe ](https://github.com/happynear/MTCNN_face_detection_alignment)<br>
 [Python & mxnet](https://github.com/pangyupo/mxnet_mtcnn_face_detection)<br>
-[Python & caffe](https://github.com/DuinoDu/mtcnn)
+[Python & caffe](https://github.com/DuinoDu/mtcnn)<br>
+[Python & Pytorch](https://modelscope.cn/models/damo/cv_manual_face-detection_mtcnn/summary)
 
 ### Face Recognition 
 Here we strongly recommend [Center Face](https://github.com/ydwen/caffe-face), which is an effective and efficient open-source tool for face recognition.
@@ -33,6 +34,13 @@ Here we strongly recommend [Center Face](https://github.com/ydwen/caffe-face), w
         ISSN={1070-9908}, 
         month={Oct}
     }
+    @inproceedings{zhang2017detecting,
+        title={Detecting faces using inside cascaded contextual cnn},
+        author={Zhang, Kaipeng and Zhang, Zhanpeng and Wang, Hao and Li, Zhifeng and Qiao, Yu and Liu, Wei},
+        booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+        pages={3171--3179},
+        year={2017}
+    }
 
 ### License
 This code is distributed under MIT LICENSE
@@ -41,4 +49,4 @@ This code is distributed under MIT LICENSE
 Yu Qiao
 yu.qiao@siat.ac.cn<br>
 Kaipeng Zhang
-kpzhang@cmlab.csie.ntu.edu.tw
+zhangkaipeng@pjlab.org.cn
